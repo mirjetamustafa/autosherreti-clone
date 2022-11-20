@@ -1,0 +1,1068 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    font-family: 'Lato', sans-serif;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+/* Header*/
+.veturat{
+    background-image: url('img/bg.jpg');
+    background-size: cover;
+    background-attachment: inherit;
+    color: white;
+    height: 500px;
+    width: 100%;
+}
+.veturat::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 500px;
+    background-color: #333;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    z-index: 0;
+    mix-blend-mode: hard-light;
+}
+.veturat > *{
+    z-index: 10;
+    position: relative;
+}
+/* Navbar*/
+
+.navbar{
+    display: flex;
+	justify-content: space-between;
+	padding: 0.4rem;
+    
+}
+.navbar ul{
+    list-style-type: none;
+}
+.navbar ul li{
+    display: inline;
+}
+.navbar ul li a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+
+.navbar ul li a:hover{
+    color: red;
+    animation-name: right;
+    animation-duration: 2s;
+}
+
+@keyframes right {
+  from {color: white;}
+  to {color: red;}
+}
+
+.img{
+    width: 35%;
+    height: 60%;
+    padding-top: 0;
+}
+
+.inventory{
+    padding: 24% 0 0 50px;
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Financing Calucaltor */
+.financing{
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+    position: relative;
+}
+.financing::before{
+    content: "";
+    width: 20px;
+    position: absolute;
+    bottom: 10px;
+    height: 2px;
+    margin: 0px 0 0px 0px;
+    background: #db2d2e;
+    transform: translateY(15px);
+    transition: all 500ms ease;
+}
+
+/* Cars List */
+
+.form-group, .payment{
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: rgb(161, 161, 161);
+}
+.bg-danger{
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    border: none;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+.bg-danger:hover,
+.up:focus {
+  box-shadow: inset 0 -3.25em 0 0 rgb(59, 59, 59);
+  color: white;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: red;
+    opacity: .7;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+    z-index: 0;
+}
+.card:hover .overlay {
+  bottom: 56%;
+  height: 44%; 
+}
+
+.text{
+    display: flex;
+	justify-content: space-between;
+	padding-left: 2rem;
+    margin-top: 27%;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.text ul{
+    list-style-type: none;
+}
+.text ul li{
+    display: inline;
+}
+
+.text ul li a {
+    background: transparent;
+    border-style: solid;
+    border-color: #fff;
+    border-radius: 100%;
+    color: #fff;
+    margin: 10px 10px 10px 0;
+    padding: 10px;
+    text-decoration: none;
+    z-index: 10;
+}
+.text ul li a:hover{
+    background-color: white;
+    color: red;
+}
+.card{
+    width: 270px;
+}
+.body{
+    text-align: center;
+    height: 35%;
+    padding-bottom: 20%;
+}
+
+.text-1 i{
+    position: relative;
+    font-size: 15px;
+    color: #999999;
+    overflow: hidden;
+}
+.title-1{
+    position: relative;
+    bottom: 6px;
+}
+.title-1 a{
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 400;
+    color: rgb(218, 19, 19);
+    font-weight: bold;
+}
+.title-1 a:hover{
+    color: black;
+}
+.title-1::before{
+    content: "";
+    width: 40px;
+    position: absolute;
+    bottom: 7px;
+    height: 1px;
+    left: 0;
+    right: 0;
+    margin: 140px 0 0px 37%;
+    background: black;
+    transform: translateY(15px);
+    transition: all 500ms ease;
+}
+.title-1::after{
+    content: "";
+    width: 60px;
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    left: 0;
+    right: 0;
+    margin: 0 33%;
+    background: black;
+    transform: translateY(15px);
+    transition: all 500ms ease;
+}
+.title-1:hover::after{
+    width: 40px;
+    margin: 0 0 0 37%;
+}
+.title-1:hover::before{
+    width: 60px;
+    margin: 0 0 0 33%;
+    
+}
+
+.pagination{
+    padding: 0px 0 80px 200px;
+    margin: 40px 0 0 0 ;
+}
+.pagination li a{
+    font-size: 15px;
+    font-weight: 500;
+    margin: 3px;
+    border: 1px solid #e3e3e3;
+    color: rgb(168, 167, 167);
+    transition: all 500ms ease;
+}
+.pagination li a:hover{
+
+    background-color: rgb(218, 19, 19);
+    color: white;
+}
+
+
+
+/*=================================== Kontakti ======================================*/
+.kontakti{
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 70px;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.kontakti::before{
+    content: "";
+    width: 60px;
+    position: absolute;
+    bottom: 7px;
+    height: 1px;
+    left: 40%;
+    right: 0;
+    margin: 50px 0 0px 63px;
+    background: #db2d2e;
+    transform: translateY(15px);
+    transition: all 500ms ease;
+}
+.kontakti::after{
+    content: "";
+    width: 110px;
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    left: 40%;
+    right: 0;
+    margin: 0 40px;
+    background: #db2d2e;
+    transform: translateY(15px);
+    transition: all 500ms ease;
+}
+.kontakti:hover::after{
+    width: 60px;
+    margin: 50px 0 0px 63px;
+}
+.kontakti:hover::before{
+    width: 110px;
+    margin: 0 40px;
+}
+
+.flex-box{
+   background: rgb(247, 246, 246);
+   margin: 40px 0 70px 15px;
+   text-align: center;
+}
+.card-box{
+    position: relative;
+    height: 210px;
+}
+.card-box i{
+    text-align: center;
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    display: inline-block;
+    border-radius: 50%;
+    color: rgb(189, 187, 187);
+    margin-bottom: 0px;
+    font-size: 30px;
+    transition: .8s ease;
+}
+
+.contact-icon:hover{
+    background-color: #db2d2e;
+    color: white;
+}
+.adresa{
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    position: relative;
+}
+.adresa::before{
+    content: "";
+    width: 20px;
+    position: absolute;
+    bottom: 10px;
+    height: 2px;
+    margin: 0px 0 0px 17px;
+    background: #db2d2e;
+    transform: translateY(15px);
+    transition: all 500ms ease;
+}
+.magj{
+    font-family: sans-serif;
+    color: rgb(156, 156, 156);
+}
+
+
+.cont-form {
+  padding: 20px;
+}
+
+.form-input input[type=text], input[type=email] {
+    width: 31%;
+    padding: 12px;
+    margin: 6px;
+    border: none;
+    background: rgb(236, 236, 236);
+    color: #333;
+    border-radius: 1px;
+    box-sizing: border-box;
+   transition: .4s ease;
+}
+.focus-only:focus {
+    outline: 1px solid red;
+    transition: .5s ease;
+}
+   
+textarea {
+    width: 100%;
+    padding: 20px;
+    border: none;
+    background: rgb(236, 236, 236);
+    color: #333;
+    border-radius: 1px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    transition: .5s ease;
+}
+.form-input input[type=submit] {
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    width: 100%;
+    background-color: #db2d2e;
+    color: white;
+    padding: 7px 20px;
+    border: none;
+    border-radius: 1px;
+    cursor: pointer;
+    transition: .8s ease;
+}
+   
+
+.form-input input[type=submit]:hover{
+    background-color: #333;
+    color: white;
+}
+
+.sidebar-1{
+    background-color: #f2f2f2;
+    width: 100%;
+    height: 30%;  
+    margin-top: 30px;
+    padding: 30px 25px 5px 10px;
+}
+.open ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0 0 10px 0;
+}
+.open ul li{
+    display: block;
+    margin-left: 10px;
+    margin-top: 7px;
+    padding-left: 18px;
+}
+.open strong  {
+  width: 100%;
+}
+.open  span{
+    float: right;
+    margin-right: 50px;
+    font-size: 15px;
+    color: #909090;
+    font-weight: bold;
+    
+}
+
+/*============================== Map ===============================*/
+
+#map{
+    width: 100%;
+    height: 500px;
+    margin-top: 100px;
+}
+#mapp{
+    width: 100%;
+    height: 400px;
+    margin-bottom: 80px;
+}
+
+.tabs{
+    display: flex;
+	justify-content: space-between;
+    padding: 50px 0 40px 0;
+    margin-top: 50px;
+}
+.tabs {
+    list-style-type: none;
+}
+
+.tabs li i{
+    text-decoration: none;
+    font-size: 15px;
+    color: #db2d2e;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.vehicle{
+    position: relative;
+}
+
+.vehicle::before{
+    content: "";
+    width: 180px;
+    position: absolute;
+    bottom: 7px;
+    height: 3px;
+    left: 0;
+    right: 0;
+    margin: 40px 0 0px 0px;
+    background: #db2d2e;
+    transform: translateY(15px);
+    transition: all 500ms ease;
+}
+
+/*============== Carousel ================*/
+.related{
+    margin-bottom: 50px;
+}
+.related-vehilce{
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.owl-theme{
+    top: 0px;
+}
+.overlay {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: red;
+    opacity: .7;
+    overflow: hidden;
+    width: 100%;
+    height: 0;
+    transition: .5s ease;
+}
+.item:hover .overlay {
+  bottom: 54%;
+  height: 46%;
+}
+.text{
+    display: flex;
+	justify-content: space-between;
+	padding-left: 2rem;
+    margin-top: 27%;
+    text-align: center;
+}
+
+.text ul{
+    list-style-type: none;
+}
+.text ul li{
+    display: inline;
+}
+.text ul li a{
+    background: transparent;
+    border-style: solid;
+    border-color: #fff;
+    border-radius: 100%;
+    color: #fff;
+    margin: 10px 10px 10px 0;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.fa-exchange-alt::before{
+    content: "\f362";
+}
+.text ul li a:hover{
+    background-color: white;
+    color: red;
+}
+
+.body-1{
+    text-align: center;
+    border: 1px solid #e3e3e3;
+    height: 35%;
+    padding-bottom: 20%;
+}
+.text-1{
+    font-size: 15px;
+    color: #999999;
+}
+.title-1{
+    position: relative;
+    bottom: 6px;
+}
+.title-1 a{
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgb(218, 19, 19);
+    font-weight: bold;
+}
+.title-1 a:hover{
+    color: black;
+}
+
+
+.title-1::before{
+    content: "";
+    width: 40px;
+    position: absolute;
+    bottom: 7px;
+    height: 1px;
+    left: 0;
+    right: 0;
+    margin: 140px 0 0px 37%;
+    background: black;
+    transform: translateY(15px);
+    transition: all 500ms ease;
+}
+.title-1::after{
+    content: "";
+    width: 60px;
+    position: absolute;
+    bottom: 0;
+    height: 1px;
+    left: 0;
+    right: 0;
+    margin: 0 33%;
+    background: black;
+    transform: translateY(15px);
+    transition: all 500ms ease;
+}
+.title-1:hover::after{
+    width: 40px;
+    margin: 0 0 0 37%;
+}
+.title-1:hover::before{
+    width: 60px;
+    margin: 0 0 0 33%;
+    
+}
+
+/*===================== Car Details ============================*/
+
+.details{
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #333;
+    margin-top: 80px;
+}
+
+.details-nav{
+    display: flex;
+	justify-content: space-between;
+	float: left;
+    margin: 20px 0 20px 6px; 
+}
+.details-nav ul{
+    list-style-type: none;
+    
+}
+.details-nav ul li{
+    display: inline;
+}
+.details-nav ul li a{
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+    font-size: 15px;
+    border: 1px solid rgb(226, 225, 225);
+    padding: 13px;
+    font-weight: bold;
+    margin: 5px;
+    color: #999999;
+    transition: .5s ease;
+}
+.details-nav ul li a i{
+    padding: 5px;
+}
+.details-nav ul li a:hover{
+    background: #db2d2e;
+    color: white;
+}
+
+.car-details{
+    display: flex;
+	justify-content: space-between;
+	padding: 0.4rem; 
+    width: 100%;
+    height: 60px;
+    background: #fdfcfc;
+    border: 1px solid #d6d4d4;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+.single-box{
+	list-style-type: none;
+	padding-top: 4px;
+    padding-left: 4px;
+}
+.single-box li{
+    display: inline;
+}
+.car-details ul li a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: #333;
+    font-weight: bold;
+    
+}
+
+.single-share-box{
+    float: right;
+    display: flex;
+	list-style-type: none;
+	padding-top: 4px;
+}
+.single-share-box  li{
+    display: inline;
+}
+.uppercase{
+    padding: 10px;
+    margin-right: 5px;
+    font-weight: 900;
+}
+.car-details ul li a i{
+    border-radius: 50%;
+    font-size: 12px;
+    padding: 8px;
+    margin: 5px;
+    background: #db2d2e;
+    color: white;
+    transition: .5s ease;
+}
+.car-details ul li a i:hover{
+    background: #333;
+}
+
+/*====================== Car Info ==========================*/
+
+.car-info ul{
+    list-style-type: none;
+    padding: 0.6rem;
+    margin: 20px 15px 0 0;
+}
+.car-info ul li{
+    display: block;
+    margin-left: 10px;
+    margin-top: 15px;
+    border-bottom: 1px solid #e2dede;
+}
+.car-info span  {
+    font-family: sans-serif;
+    width: 100%;
+    color: #999999;
+}
+.car-info  strong{
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    float: right;
+    margin-right: 100px;
+    font-size: 15px;
+    color: black;
+    font-weight: bold;
+    
+}
+
+
+
+
+/*======================= Footer ===============================*/
+
+footer{
+    background-color: rgb(27, 27, 27);
+}
+
+.wrapper .button{
+    display: inline;
+    height: 30px;
+    width: 30px;
+    color: white;
+    margin: 0 5px;
+}
+.button a i{
+    padding-left: 200px;
+}
+
+.wrapper .button .icon-1{
+    text-decoration: none;
+    display: inline;
+    text-align: center;
+    height: 30px;
+    width: 30px;
+    line-height: 60px;
+    color: white;
+    padding: 20px;
+    transition: all 0.5s ease-out;
+}
+.wrapper .button:nth-child(1):hover .icon-1{
+    background-color: #4267B2;
+}
+.wrapper .button:nth-child(2):hover .icon-1{
+    background-color: #E1306C;
+}
+.wrapper .button:nth-child(3):hover .icon-1{
+    background-color: #1DA1F2;
+}
+.wrapper .button .icon-1 i{
+    font-size: 26px;
+    color: grey;
+    transition: all 0.3s ease-out;
+}
+.wrapper .button:hover .icon-1 i{
+    color: #fff;
+}
+
+.footer{
+    padding-top: 50px;
+}
+.info{
+    color: #909090;
+    margin: 0 0 10px;
+}
+
+.map ul{
+    list-style-type: none;
+    padding-top: 10px;
+    padding-left: 0px;
+}
+.map ul li{
+    display: block;
+    margin-top: 20px;
+}
+.map ul li i span{
+    font-size: 1rem;
+    margin-right: 50px;
+    padding: 0px;
+    color: #909090;
+    font-weight: bold;
+}
+.map span{
+    font-size: 15px;
+    margin-right: 50px;
+    padding: 10px;
+    color: #909090;
+    font-weight: bold;
+}
+.map-1{
+    color: red;
+    margin-right: 10px;
+}
+
+.useful{
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    padding-left: 10px;
+    font-size: 13px;
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+}
+.useful::before{
+    content: "";
+    width: 20px;
+    position: absolute;
+    bottom: 7px;
+    height: 2px;
+    margin: 50px 0 0px 0px;
+    background: #db2d2e;
+    transform: translateY(15px);
+    transition: all 500ms ease;
+}
+.rent{
+    font-size: 15px;
+    margin-right: 50px;
+    padding: 10px;
+    color: #909090;
+    font-weight: bold;
+}
+
+.rent ul{
+    list-style-type: none;
+    padding-top: 10px;
+    padding-left: 0px;
+}
+.rent ul li{
+    display: block;
+}
+.rent ul li a{
+    text-decoration: none;
+    font-size: 15px;
+    padding-top: 15px;
+    color: #909090;
+    font-weight: bold;
+}
+.rent ul li a:hover{
+    color: red;
+    animation-name: rent;
+    animation-duration: 2s;
+}
+
+@keyframes rent {
+  from {color: #909090; }
+  to {color: red;}
+}
+.arrow{
+    margin-right: 10px;
+}
+
+.footer-box{
+    background: rgba(255, 255, 255, 0.08);
+    clear: both;
+    padding: 30px;
+    margin-bottom: 25px;
+}
+.footer-text{
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    position: relative;
+    text-transform: uppercase;
+}
+.footer-text::before{
+    content: "";
+    width: 20px;
+    position: absolute;
+    bottom: 7px;
+    height: 2px;
+    margin: 50px 0 0px 0px;
+    background: #db2d2e;
+    transform: translateY(15px);
+    transition: all 500ms ease;
+}
+.box-text{
+    font-family: Roboto, Arial, Helvetica, sans-serif;
+    color: #909090;
+    padding-top: 25px;
+    margin: 0 0 10px;
+}
+.box-link{
+    display: table-cell;
+    padding-left: 20px;
+    vertical-align: middle;
+    text-decoration: none;
+}
+.box-link a{
+    color: white;
+    text-decoration: none;
+}
+.btn{
+    background: rgb(218, 19, 19);
+    border: 1px;
+    font: inherit;
+    line-height: 1;
+    margin: 0.5em;
+    padding: 1em 1em;
+    transition: 0.8s;
+}
+
+
+
+.btn-1:hover,
+.up:focus {
+  box-shadow: inset 0 -3.25em 0 0 rgb(59, 59, 59);
+  color: white;
+}
+
+
+.copyright-block{
+    background: black;
+    padding: 20px;
+    margin-top: 30px;
+}
+.pull-left{
+    color: #909090;
+}
+.pull-left a{
+    text-decoration: none;
+    color: #909090;
+}
+.pull-left a:hover{
+    color: red;
+    animation-name: pull;
+    animation-duration: 2s;
+}
+
+@keyframes pull {
+  from {color: #909090; }
+  to {color: red;}
+}
+.pull-right p{
+    color: #909090;
+}
+
+
+
+ /*=================================== Mobile =======================================*/
+@media (max-width: 500px) {
+    /* Header */
+
+.navbar-collapse{
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar  ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+.navbar  ul li a{
+    text-align: center;
+}
+.inventory{
+    text-align: center;
+    top: 150px;
+    right: 20px;
+    font-size: 20px;
+}
+.kontakti{
+    width: 360px;
+    font-size: 20px;
+    bottom: 50px;
+}
+.kontakti::before{
+    left: 20%;
+}
+.kontakti::after{
+    left: 20%;
+}
+.flex-box{
+   margin: 10px;
+   text-align: center;
+}
+.form-input input[type=text], input[type=email] {
+    width: 100%;
+}
+
+/* Footer */
+.icon-1{
+    padding-left: 0;
+    overflow: hidden;;
+}
+
+.button a i{
+    padding-left: 5px;
+}
+
+/*========================= Car list =====================*/
+
+.card{
+    width: 100%;
+}
+.pagination{
+    padding: 0px 0 0px 0px;
+    margin: 0px 0 0 0 ;
+}
+
+
+.details-nav ul li{
+    display: inline-block;
+    margin: 10px 0px 5px 0px;
+}
+.details-nav ul li a{
+    font-size: 13px;
+    padding: 7px;
+  
+
+}
+}
+
+
+.table, thead{
+    display: none;
+}
+.table, .table tbody, .table tr, .table td{
+    display: block;
+    width: 100%;
+}
+.table tr{
+    margin-bottom: 15px;
+}
+.table td{
+    text-align: right;
+    padding-right: 30%;
+    text-align: right;
+}
+.table td::before{
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    width: 30%;
+    padding-left: 15px;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: left;
+}
